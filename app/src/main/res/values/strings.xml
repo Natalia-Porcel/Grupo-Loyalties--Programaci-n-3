@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">Yummy</string>
-    <string name="registro">Registro</string>
-    <string name="email">E-mail</string>
-    <string name="confir_contrasena">Confirmar contraseña</string>
-    <string name="crear_cuenta">Crear cuenta</string>
+    <string name="enter_username">Usuario</string>
+    <string name="enter_password">Contraseña</string>
+    <string name="login">Entrar</string>
+    <string name="register">¿Eres nuevo? Registrate</string>
+    <string name="forgot_password">¿Olvidaste tu contraseña?</string>
 </resources>
