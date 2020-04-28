@@ -9,4 +9,11 @@
     <string name="email">E-mail</string>
     <string name="confir_password">Confirmar contraseña</string>
     <string name="create_account">Crear cuenta</string>
+    <string name="recipe_name">Nombre de la receta</string>
+    <string name="ingredients_title">Ingredientes</string>
+    <string name="ingredients_tips">Ingredientes de la receta</string>
+    <string name="preparation_title">Preparación</string>
+    <string name="preparation_tips">Cómo se prepara la receta</string>
+    <string name="final_photo">Resultado final</string>
+    <string name="add_recipe">AÑADIR RECETA</string>
 </resources>
