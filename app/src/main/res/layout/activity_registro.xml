@@ -50,7 +50,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
-            android:inputType="text"/>
+            android:inputType="textEmailAddress"/>
 
         <TextView
             android:layout_width="wrap_content"

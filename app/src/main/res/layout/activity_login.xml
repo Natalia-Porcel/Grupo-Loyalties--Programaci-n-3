@@ -44,7 +44,8 @@
                     android:hint="@string/enter_username"
                     android:textColorHint="@color/colorPrimaryLight"
                     android:padding="10dp"
-                    android:textColor="@color/colorPrimaryDark"/>
+                    android:textColor="@color/colorPrimaryDark"
+                    android:inputType="text"/>
             </LinearLayout>
 
             <LinearLayout
