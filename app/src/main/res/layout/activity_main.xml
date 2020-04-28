@@ -1,7 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="113dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/button"
+            app:layout_constraintEnd_toStartOf="@+id/imageButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="96dp"
+            android:layout_height="38dp"
+            android:layout_marginBottom="550dp"
+            android:text="Perfil"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="49dp"
+            android:layout_height="93dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="550dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/autoCompleteTextView"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@android:drawable/ic_menu_search" />
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteTextView"
+            style="@android:style/Widget.AutoCompleteTextView"
+            android:layout_width="264dp"
+            android:layout_height="83dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="551dp"
+            android:backgroundTint="#FFEB3B"
+            android:text="Buscar receta..."
+            android:textAlignment="center"
+            android:textColor="#FFEB3B"
+            android:textColorHighlight="#E91E63"
+            android:textColorHint="#E91E63"
+            android:textColorLink="#E91E63"
+            android:textScaleX="@android:dimen/app_icon_size"
+            android:textSize="36sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageButton"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <LinearLayout
+            android:layout_width="409dp"
+            android:layout_height="548dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="2dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button">
+
+            <ImageButton
+                android:id="@+id/imageButton2"
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+                android:background="#A7FFEB3B"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/categoias" />
+
+            <ImageButton
+                android:id="@+id/imageButton3"
+                android:layout_width="match_parent"
+                android:layout_height="122dp"
+                android:backgroundTint="#ADFFEB3B"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/platos_fuertes" />
+
+            <ImageButton
+                android:id="@+id/imageButton4"
+                android:layout_width="match_parent"
+                android:layout_height="128dp"
+                android:backgroundTint="#9EFFEB3B"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/acompanamientos" />
+
+            <ImageButton
+                android:id="@+id/imageButton5"
+                android:layout_width="match_parent"
+                android:layout_height="102dp"
+                android:backgroundTint="#AEFFEB3B"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/postres" />
+
+            <ImageButton
+                android:id="@+id/imageButton6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#BCFFEB3B"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/bebidas" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
