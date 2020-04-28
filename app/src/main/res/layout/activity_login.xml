@@ -85,13 +85,12 @@
                 android:textSize="15sp"
                 android:textStyle="bold"/>
             <ProgressBar
-                android:id="@+id/loadingProgressBar"
+                android:id="@+id/circular"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_gravity="center"
                 android:indeterminate="true"
-                android:visibility="invisible"
-                tools:visibility="visible" />
+                android:visibility="invisible"/>
 
         </LinearLayout>
         <TextView
