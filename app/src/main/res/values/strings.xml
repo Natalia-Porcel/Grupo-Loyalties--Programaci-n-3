@@ -16,4 +16,6 @@
     <string name="preparation_tips">Cómo se prepara la receta</string>
     <string name="final_photo">Resultado final</string>
     <string name="add_recipe">AÑADIR RECETA</string>
+    <string name="profile">Perfil</string>
+    <string name="search">Buscar Receta</string>
 </resources>
