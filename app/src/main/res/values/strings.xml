@@ -18,4 +18,6 @@
     <string name="add_recipe">Añadir receta</string>
     <string name="my_recipes">Mis recetas</string>
     <string name="liked_recipes">Recetas que me gustan</string>
+    <string name="profile">Perfil</string>
+    <string name="search">Buscar Receta</string>
 </resources>
