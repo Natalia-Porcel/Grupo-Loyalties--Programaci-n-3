@@ -15,5 +15,7 @@
     <string name="preparation_title">Preparación</string>
     <string name="preparation_tips">Cómo se prepara la receta</string>
     <string name="final_photo">Resultado final</string>
-    <string name="add_recipe">AÑADIR RECETA</string>
+    <string name="add_recipe">Añadir receta</string>
+    <string name="my_recipes">Mis recetas</string>
+    <string name="liked_recipes">Recetas que me gustan</string>
 </resources>
