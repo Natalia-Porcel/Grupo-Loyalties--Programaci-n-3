@@ -19,6 +19,7 @@
             android:layout_gravity="center"/>
 
         <TextView
+            android:id="@+id/textUsuario"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -28,6 +29,7 @@
             android:textColor="@color/colorPrimary"
             android:textStyle="bold"/>
         <Button
+            android:id="@+id/MisRecetas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -37,9 +39,10 @@
             android:textSize="30sp"
             android:background="@color/colorButton"
             android:textColor="@color/colorWhite"
-            android:paddingVertical="20dp"/>
+            android:paddingVertical="20dp" />
 
         <Button
+            android:id="@+id/likes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -52,6 +55,7 @@
             android:paddingVertical="20dp"/>
 
         <Button
+            android:id="@+id/ButtonAñadir"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -61,7 +65,7 @@
             android:textSize="30sp"
             android:background="@color/colorButton"
             android:textColor="@color/colorWhite"
-            android:paddingVertical="20dp"/>
+            android:paddingVertical="20dp" />
 
     </LinearLayout>
 

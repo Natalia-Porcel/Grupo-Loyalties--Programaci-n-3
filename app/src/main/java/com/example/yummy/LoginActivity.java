@@ -3,6 +3,7 @@ package com.example.yummy;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 
 import android.util.Log;
@@ -21,6 +22,8 @@ public class LoginActivity extends AppCompatActivity {
     ProgressBar circularBar;
     TextView forgotPassword;
     TextView register;
+    Typeface chewy;
+    Typeface glacial;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +36,18 @@ public class LoginActivity extends AppCompatActivity {
         circularBar=findViewById(R.id.circular);
         forgotPassword=findViewById(R.id.forgot_password);
         register=findViewById(R.id.newRegister);
+
+        String font1= "fuentes/Chewy.ttf";
+        String font2= "fuentes/Glacial.otf";
+
+        this.chewy= Typeface.createFromAsset(getAssets(),font1);
+        this.glacial=Typeface.createFromAsset(getAssets(),font2);
+
+        loginButton.setTypeface(chewy);
+        editTextUsername.setTypeface(glacial);
+        editTextPassword.setTypeface(glacial);
+        forgotPassword.setTypeface(glacial);
+        register.setTypeface(glacial);
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
