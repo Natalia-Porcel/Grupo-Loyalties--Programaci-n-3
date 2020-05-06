@@ -20,4 +20,16 @@
     <string name="liked_recipes">Recetas que me gustan</string>
     <string name="profile">Perfil</string>
     <string name="search">Buscar Receta</string>
+    <string name="categorias">Categorias</string>
+    <string name="platoFuerte">Platos Fuertes</string>
+    <string name="acompañamientos">Acompañamientos</string>
+    <string name="Ensaladas">Ensaladas</string>
+    <string name="Bebidas">Bebidas</string>
+    <string name="Salsasyaderezos">Salsas y Aderezos</string>
+    <string name="Bocadillos">Bocadillos</string>
+    <string name="sopas">Sopas y Guisados</string>
+    <string name="Postres">Postres</string>
+    <string name="Reposteria">Reposteria</string>
+    <string name="Desayuno">DEsayuno</string>
+    <string name="ComidaBoliviana">Comida Boliviana</string>
 </resources>
