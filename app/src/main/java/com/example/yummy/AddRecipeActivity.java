@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.FileProvider;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.net.Uri;
@@ -17,22 +18,17 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.File;
 
 public class AddRecipeActivity extends AppCompatActivity {
-    TextView nombreReceta;
-    TextView TextIngredientes;
-    TextView TextPreparacion;
-    EditText ingredientes;
-    EditText pasos;
+    TextView nombreReceta,TextIngredientes,TextPreparacion,addFoto;
+    EditText ingredientes,pasos;
     Button añadirACategoria;
-    TextView addFoto;
-    ImageButton camara;
-    ImageButton galeria;
+    ImageButton camara,galeria;
     ImageView fotoReceta;
-    Typeface chewy;
-    Typeface glacial;
+    Typeface chewy,glacial;
     Uri imageUri;
 
     static int REQUEST_CAMERA = 1234;
@@ -84,6 +80,15 @@ public class AddRecipeActivity extends AppCompatActivity {
                 intent.setType("image/*");
                 intent.setAction(Intent.ACTION_PICK);
                 startActivityForResult(Intent.createChooser(intent, "Selecciona una imagen:"), REQUEST_GALLERY);
+            }
+        });
+        añadirACategoria.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AddRecipeActivity.this,SelectCategoryActivity.class);
+                startActivity(intent);
+                Context context = getApplicationContext();
+                Toast.makeText(context, "Seleccione la categoria de la receta",Toast.LENGTH_SHORT);
             }
         });
     }
