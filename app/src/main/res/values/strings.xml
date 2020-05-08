@@ -32,5 +32,9 @@
     <string name="Reposteria">Reposteria</string>
     <string name="Desayuno">Desayuno</string>
     <string name="ComidaBoliviana">Comida Boliviana</string>
+    <string name="Change_password">Restablecer contraseña</string>
+    <string name="New_password">Nueva contraseña</string>
+    <string name="Confirm_password">Confirmar nueva contraseña</string>
+    <string name="Accept">ACEPTAR</string>
     <string name="addImage">Añade una Foto:</string>
 </resources>
