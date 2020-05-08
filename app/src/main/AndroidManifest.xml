@@ -14,6 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".SelectCategoryActivity"></activity>
+        <activity android:name=".ProfileActivity" />
         <activity android:name=".RecycleViewRecetas"></activity>
         <activity android:name=".RecetaActivity" />
         <activity android:name=".ProfileActivity" />
