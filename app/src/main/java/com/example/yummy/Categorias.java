@@ -23,11 +23,11 @@ public class Categorias {
     }
 
     public static Categorias[] ITEMS = {
-            new Categorias("Platos Fuertes", R.drawable.platos_fuertes),
-            new Categorias("Acompañamientos" , R.drawable.postres),
+            new Categorias("Platos Fuertes", R.drawable.comida_rosa),
+            new Categorias("Acompañamientos" , R.drawable.acompaniamiento),
             new Categorias("Ensaladas", R.drawable.bebidas),
             new Categorias("Bebidas", R.drawable.bebidas),
-            new Categorias("Salsas y Aderezos", R.drawable.bebidas),
+            new Categorias("Salsas y Aderezos", R.drawable.salas),
             new Categorias("Bocadillos", R.drawable.bebidas),
             new Categorias("Sopas y Guisados", R.drawable.bebidas),
             new Categorias("Postres", R.drawable.bebidas),

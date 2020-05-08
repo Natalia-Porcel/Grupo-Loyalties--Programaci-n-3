@@ -30,6 +30,7 @@
     <string name="sopas">Sopas y Guisados</string>
     <string name="Postres">Postres</string>
     <string name="Reposteria">Reposteria</string>
-    <string name="Desayuno">DEsayuno</string>
+    <string name="Desayuno">Desayuno</string>
     <string name="ComidaBoliviana">Comida Boliviana</string>
+    <string name="addImage">Añade una Foto:</string>
 </resources>
