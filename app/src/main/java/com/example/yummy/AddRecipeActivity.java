@@ -88,7 +88,7 @@ public class AddRecipeActivity extends AppCompatActivity {
                 Intent intent = new Intent(AddRecipeActivity.this,SelectCategoryActivity.class);
                 startActivity(intent);
                 Context context = getApplicationContext();
-                Toast.makeText(context, "Seleccione la categoria de la receta",Toast.LENGTH_SHORT);
+                Toast.makeText(context, "Seleccione la categoria de la receta",Toast.LENGTH_SHORT).show();
             }
         });
     }

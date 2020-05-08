@@ -76,6 +76,13 @@ public class LoginActivity extends AppCompatActivity {
                 animarProgressBar();
             }
         });
+        forgotPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent (LoginActivity.this,ForgetPasswordActivity.class);
+                startActivity(intent);
+            }
+        });
 
         register.setOnClickListener(new View.OnClickListener() {
             @Override

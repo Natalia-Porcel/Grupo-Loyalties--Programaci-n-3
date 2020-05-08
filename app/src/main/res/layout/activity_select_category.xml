@@ -13,18 +13,18 @@
                 android:orientation="vertical"
                 android:background="@drawable/categorias">
                 <TextView
-                    android:id="@+id/textCategorias"
+                    android:id="@+id/textSelectCategorias"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/select_category"
                     android:gravity="center"
                     android:textSize="40sp"
                     android:background="#54FFFFFF"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
         </LinearLayout>
 
             <GridView
-                android:id="@+id/gridCategoria"
+                android:id="@+id/gridSelectCategoria"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
