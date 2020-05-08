@@ -30,11 +30,12 @@
     <string name="sopas">Sopas y Guisados</string>
     <string name="Postres">Postres</string>
     <string name="Reposteria">Reposteria</string>
-    <string name="Desayuno">Desayuno</string>
+    <string name="Desayuno">DEsayuno</string>
     <string name="ComidaBoliviana">Comida Boliviana</string>
     <string name="Change_password">Restablecer contraseña</string>
     <string name="New_password">Nueva contraseña</string>
     <string name="Confirm_password">Confirmar nueva contraseña</string>
     <string name="Accept">ACEPTAR</string>
+    <string name="addImage">Añade una Foto:</string>
     <string name="select_category">Selecciona la categoria</string>
 </resources>

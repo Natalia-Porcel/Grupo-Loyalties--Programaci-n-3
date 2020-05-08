@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     }
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
+        Intent intent =new Intent(MainActivity.this, RecycleViewRecetas.class);
+        startActivity(intent);
     }
 }
