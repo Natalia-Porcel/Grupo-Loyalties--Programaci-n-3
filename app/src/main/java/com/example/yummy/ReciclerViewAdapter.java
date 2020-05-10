@@ -1,9 +1,10 @@
 package com.example.yummy;
 
+import android.content.Context;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -14,11 +15,10 @@ import java.util.ArrayList;
 public class ReciclerViewAdapter extends RecyclerView.Adapter<ReciclerViewAdapter.ViewHolder> implements View.OnClickListener {
     ArrayList<String> recetas;
     private View.OnClickListener listener;
+
     public ReciclerViewAdapter(ArrayList<String> recetas) {
         this.recetas = recetas;
     }
-
-
 
     @NonNull
     @Override
@@ -47,7 +47,6 @@ public class ReciclerViewAdapter extends RecyclerView.Adapter<ReciclerViewAdapte
         if (listener!=null){
             listener.onClick(v);
         }
-
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

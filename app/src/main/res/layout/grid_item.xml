@@ -20,5 +20,4 @@
         android:gravity="center"
         android:padding="16dp"
         android:textColor="@android:color/primary_text_light" />
-
 </FrameLayout>
