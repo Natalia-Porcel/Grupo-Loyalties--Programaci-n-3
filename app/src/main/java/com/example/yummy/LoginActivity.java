@@ -156,5 +156,12 @@ public class LoginActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
     }
+
+    public void onClick(View view) {
+        Intent miIntent = new Intent(LoginActivity.this, MainActivity.class);
+        startActivity(miIntent);
+    }
+
+
 }
 

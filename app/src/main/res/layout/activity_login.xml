@@ -85,7 +85,8 @@
                 android:background="@color/colorButton"
                 android:text="@string/login"
                 android:textSize="15sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:onClick="onClick"/>
             <ProgressBar
                 android:id="@+id/circular"
                 android:indeterminateTint="@color/colorAccent"
