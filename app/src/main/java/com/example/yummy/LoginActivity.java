@@ -2,10 +2,12 @@ package com.example.yummy;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import android.animation.ValueAnimator;
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
@@ -112,6 +114,8 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        cargarPreferencias();
+
     }
     private void animarProgressBar(){
         ValueAnimator valueAnimator= new ValueAnimator();
@@ -125,6 +129,36 @@ public class LoginActivity extends AppCompatActivity {
         });
         valueAnimator.start();
     }
+
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.loginButton:
+                guardarPreferencias();
+                break;
+        }
+    }
+
+    private  void  cargarPreferencias(){
+        SharedPreferences preferencias = getSharedPreferences("nombre", MODE_PRIVATE);
+        String usuario= preferencias.getString("usuario","");
+        String pass=preferencias.getString("pass","");
+        editTextUsername.setText(usuario);
+        editTextPassword.setText(pass);
+    }
+
+    private void guardarPreferencias() {
+        SharedPreferences preferencias = getSharedPreferences("nombre", MODE_PRIVATE);
+        String usuario= editTextPassword.getText().toString();
+        String pass= editTextPassword.getText().toString();
+        SharedPreferences.Editor editor = preferencias.edit();
+        editor.putString("user",usuario);
+        editor.putString("pass",pass);
+        editTextUsername.setText(usuario);
+        editTextPassword.setText(pass);
+        editor.commit();
+    }
+
+
     @Override
     protected void onStart() {
         super.onStart();
@@ -155,11 +189,6 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-    }
-
-    public void onClick(View view) {
-        Intent miIntent = new Intent(LoginActivity.this, MainActivity.class);
-        startActivity(miIntent);
     }
 
 
