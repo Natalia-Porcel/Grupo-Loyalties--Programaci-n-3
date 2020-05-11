@@ -2,6 +2,7 @@ package com.example.yummy;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
@@ -57,7 +58,12 @@ public class RegistroActivity extends AppCompatActivity {
         emailEdit.setTypeface(glacial);
         confirEdit.setTypeface(glacial);
 
+        crearCuenta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent registrar = new Intent(RegistroActivity.this, MainActivity.class);
+                startActivity(registrar);
+            }
+        });
     }
-
-
 }

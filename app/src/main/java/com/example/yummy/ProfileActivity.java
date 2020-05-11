@@ -37,6 +37,7 @@ public class ProfileActivity extends AppCompatActivity {
         likes.setTypeface(chewy);
         add.setTypeface(chewy);
 
+
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

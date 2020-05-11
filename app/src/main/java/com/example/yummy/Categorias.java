@@ -1,7 +1,5 @@
 package com.example.yummy;
 
-import android.graphics.Typeface;
-
 public class Categorias {
     String categoria;
     int imagenCategoria;
@@ -27,7 +25,7 @@ public class Categorias {
             new Categorias("Acompañamientos" , R.drawable.acompaniamiento),
             new Categorias("Ensaladas", R.drawable.ensaladas),
             new Categorias("Bebidas", R.drawable.bebidas),
-            new Categorias("Salsas y Aderezos", R.drawable.salas),
+            new Categorias("Salsas y Aderezos", R.drawable.salsas),
             new Categorias("Bocadillos", R.drawable.bocaditos),
             new Categorias("Sopas y Guisados", R.drawable.sopas),
             new Categorias("Postres", R.drawable.postres),
