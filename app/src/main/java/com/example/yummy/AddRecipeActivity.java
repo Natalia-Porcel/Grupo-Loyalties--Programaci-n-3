@@ -1,15 +1,10 @@
 package com.example.yummy;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.FileProvider;
-
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
-
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.view.View;
@@ -19,6 +14,9 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.FileProvider;
 
 import java.io.File;
 
@@ -48,13 +46,10 @@ public class AddRecipeActivity extends AppCompatActivity {
         camara=findViewById(R.id.cameraButton);
         galeria=findViewById(R.id.galleryButton);
         fotoReceta=findViewById(R.id.fotoDeReceta);
-
         String font1= "fuentes/Chewy.ttf";
         String font2= "fuentes/Glacial.otf";
-
         this.chewy= Typeface.createFromAsset(getAssets(),font1);
         this.glacial=Typeface.createFromAsset(getAssets(),font2);
-
         nombreReceta.setTypeface(chewy);
         TextIngredientes.setTypeface(chewy);
         TextPreparacion.setTypeface(chewy);
@@ -63,6 +58,11 @@ public class AddRecipeActivity extends AppCompatActivity {
         addFoto.setTypeface(chewy);
         añadirACategoria.setTypeface(chewy);
 
+        File file = new File(getExternalFilesDir(Environment.DIRECTORY_PICTURES), "photo.jpg");
+        imageUri = FileProvider.getUriForFile(
+                this,
+                "com.example.yummy.provider",
+                file);
         camara.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

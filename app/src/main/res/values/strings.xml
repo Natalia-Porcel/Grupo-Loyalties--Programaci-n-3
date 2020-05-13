@@ -38,4 +38,5 @@
     <string name="Accept">ACEPTAR</string>
     <string name="addImage">Añade una Foto:</string>
     <string name="select_category">Selecciona la categoria</string>
+    <string name="rememberMe">Recuerdame</string>
 </resources>

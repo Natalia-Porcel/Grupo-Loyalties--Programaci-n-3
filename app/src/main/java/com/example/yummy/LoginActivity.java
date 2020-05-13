@@ -1,9 +1,5 @@
 package com.example.yummy;
 
-import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
-
 import android.animation.ValueAnimator;
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -11,16 +7,19 @@ import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
-
 import android.os.Handler;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class LoginActivity extends AppCompatActivity {
     Button loginButton;
@@ -30,6 +29,7 @@ public class LoginActivity extends AppCompatActivity {
     ProgressBar horizontal;
     TextView forgotPassword;
     TextView register;
+    CheckBox remember;
     Typeface chewy;
     Typeface glacial;
 
@@ -48,6 +48,7 @@ public class LoginActivity extends AppCompatActivity {
         forgotPassword=findViewById(R.id.forgot_password);
         register=findViewById(R.id.newRegister);
         horizontal=findViewById(R.id.progreso);
+        remember=findViewById(R.id.cbRememberMe);
 
         String font1= "fuentes/Chewy.ttf";
         String font2= "fuentes/Glacial.otf";
@@ -60,6 +61,7 @@ public class LoginActivity extends AppCompatActivity {
         editTextPassword.setTypeface(glacial);
         forgotPassword.setTypeface(glacial);
         register.setTypeface(glacial);
+        remember.setTypeface(glacial);
 
 
         loginButton.setOnClickListener(new View.OnClickListener() {
@@ -68,7 +70,13 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 circularBar.setVisibility(View.VISIBLE);
                 final Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                Usuario user = new Usuario(editTextUsername.getText().toString(), editTextPassword.getText().toString());
+                intent.putExtra("user", user);
+                if (remember.isChecked()) {
+                    guardarPreferencias();
+                } else {
 
+                }
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
