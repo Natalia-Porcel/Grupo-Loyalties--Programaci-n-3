@@ -3,7 +3,6 @@ package com.example.yummy;
 import android.animation.ValueAnimator;
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
@@ -34,6 +33,7 @@ public class LoginActivity extends AppCompatActivity {
     Typeface glacial;
 
     int numer=1;
+    UsuarioSharedPreferencesManager usuarioPreferencias;
 
     @SuppressLint("ResourceAsColor")
     @Override
@@ -63,6 +63,13 @@ public class LoginActivity extends AppCompatActivity {
         register.setTypeface(glacial);
         remember.setTypeface(glacial);
 
+        usuarioPreferencias = new UsuarioSharedPreferencesManager(this);
+
+        if (usuarioPreferencias.getUser().getUsername() != null) {
+            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+            intent.putExtra("user", usuarioPreferencias.getUser());
+            startActivity(intent);
+        }
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.P)
@@ -72,11 +79,13 @@ public class LoginActivity extends AppCompatActivity {
                 final Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                 Usuario user = new Usuario(editTextUsername.getText().toString(), editTextPassword.getText().toString());
                 intent.putExtra("user", user);
-                if (remember.isChecked()) {
-                    guardarPreferencias();
-                } else {
 
+                if (remember.isChecked()) {
+                    usuarioPreferencias.saveUser(user);
+                } else {
+                    usuarioPreferencias.deleteUser();
                 }
+
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
@@ -122,7 +131,6 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        cargarPreferencias();
 
     }
     private void animarProgressBar(){
@@ -137,35 +145,6 @@ public class LoginActivity extends AppCompatActivity {
         });
         valueAnimator.start();
     }
-
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.loginButton:
-                guardarPreferencias();
-                break;
-        }
-    }
-
-    private  void  cargarPreferencias(){
-        SharedPreferences preferencias = getSharedPreferences("nombre", MODE_PRIVATE);
-        String usuario= preferencias.getString("usuario","");
-        String pass=preferencias.getString("pass","");
-        editTextUsername.setText(usuario);
-        editTextPassword.setText(pass);
-    }
-
-    private void guardarPreferencias() {
-        SharedPreferences preferencias = getSharedPreferences("nombre", MODE_PRIVATE);
-        String usuario= editTextPassword.getText().toString();
-        String pass= editTextPassword.getText().toString();
-        SharedPreferences.Editor editor = preferencias.edit();
-        editor.putString("user",usuario);
-        editor.putString("pass",pass);
-        editTextUsername.setText(usuario);
-        editTextPassword.setText(pass);
-        editor.commit();
-    }
-
 
     @Override
     protected void onStart() {

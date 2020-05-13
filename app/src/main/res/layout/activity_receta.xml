@@ -6,6 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".RecetaActivity"
     android:padding="10dp">
+    <ImageButton
+        android:id="@+id/ibLike"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="end"
+        android:background="?attr/selectableItemBackground"
+        android:src="@drawable/ic_fav"
+        android:tint="@color/colorAccent" />
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">

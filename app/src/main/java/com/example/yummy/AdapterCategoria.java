@@ -1,7 +1,6 @@
 package com.example.yummy;
 
 import android.content.Context;
-import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -47,14 +46,6 @@ public class AdapterCategoria extends BaseAdapter {
         final Categorias item = (Categorias) getItem(position);
         imagenCategory.setImageResource(item.getImagenCategoria());
         nombreCategory.setText(item.getCategoria());
-
-        String font1 = "fuentes/Chewy.ttf";
-        String font2 = "fuentes/Glacial.otf";
-
-        Typeface chewy = Typeface.createFromAsset(context.getAssets(), font1);
-        Typeface glacial = Typeface.createFromAsset(context.getAssets(), font2);
-
-        nombreCategory.setTypeface(chewy);
 
         return convertView;
     }

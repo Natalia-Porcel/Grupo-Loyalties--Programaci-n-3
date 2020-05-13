@@ -1,7 +1,5 @@
 package com.example.yummy;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -9,13 +7,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class ProfileActivity extends AppCompatActivity {
     TextView usuarios;
     Button misRecetas;
-    Button likes;
-    Button add;
+    Button likes,add,logout;
     Typeface chewy;
     Typeface glacial;
+    UsuarioSharedPreferencesManager usuarioPreferencias;
+    Usuario user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +26,7 @@ public class ProfileActivity extends AppCompatActivity {
         misRecetas=findViewById(R.id.MisRecetas);
         likes=findViewById(R.id.likes);
         add=findViewById(R.id.ButtonAñadir);
+        logout=findViewById(R.id.ButtonCerrarSesion);
 
         String font1= "fuentes/Chewy.ttf";
         String font2= "fuentes/Glacial.otf";
@@ -36,13 +38,24 @@ public class ProfileActivity extends AppCompatActivity {
         misRecetas.setTypeface(chewy);
         likes.setTypeface(chewy);
         add.setTypeface(chewy);
+        logout.setTypeface(chewy);
 
-
+        usuarioPreferencias = new UsuarioSharedPreferencesManager(this);
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ProfileActivity.this, AddRecipeActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.putExtra("nombre", user.getUsername());
+                setResult(RESULT_OK, intent);
+                finish();
             }
         });
     }
