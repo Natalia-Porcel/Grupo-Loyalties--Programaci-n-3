@@ -12,6 +12,8 @@ import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
     Button profile;
     EditText nombreReceta;
@@ -54,6 +56,29 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         Intent intent =new Intent(MainActivity.this, RecycleViewRecetas.class);
+
+        if(position == 0) {
+            ArrayList<String> listaRecetas = new ArrayList<>();
+
+            listaRecetas.add("Pollo al Horno");
+            listaRecetas.add("Pollo a la Coca Cola");
+            listaRecetas.add("Spaguetti a la Boloñesa");
+            listaRecetas.add("Pescado al horno");
+
+            intent.putExtra("recetas", listaRecetas);
+        }
+        if(position == 1) {
+            ArrayList<String> listaRecetas = new ArrayList<>();
+
+            listaRecetas.add("Pollo al Horno");
+            listaRecetas.add("Pollo a la Coca Cola");
+            listaRecetas.add("Spaguetti a la Boloñesa");
+            listaRecetas.add("Pescado al horno");
+
+            intent.putExtra("recetas", listaRecetas);
+        }
+
+
         startActivity(intent);
     }
 }
