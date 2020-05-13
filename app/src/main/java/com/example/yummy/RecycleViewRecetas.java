@@ -25,13 +25,13 @@ public class RecycleViewRecetas extends AppCompatActivity {
         recyclerViewRecetas = (RecyclerView) findViewById(R.id.rvRecetas);
 
         recyclerViewRecetas.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
-        listaRecetas.add("Pollo al Horno");
-        listaRecetas.add("Pollo a la Coca Cola");
-        listaRecetas.add("Spaguetti a la Boloñesa");
-        listaRecetas.add("Pescado al horno");
-        for (int i=0; i<=20;i++){
-            listaRecetas.add("Receta"+i);
+
+        Intent intent = getIntent();
+
+        if(intent.hasExtra("recetas")){
+            listaRecetas = intent.getStringArrayListExtra("recetas");
         }
+
         ReciclerViewAdapter adapter= new ReciclerViewAdapter(listaRecetas);
         recyclerViewRecetas.setAdapter(adapter);
 

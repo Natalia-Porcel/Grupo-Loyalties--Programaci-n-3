@@ -13,9 +13,10 @@ public class AdapterCategoria extends BaseAdapter {
     Context context;
 
 
-    public AdapterCategoria (Context context){
-        this.context=context;
+    public AdapterCategoria(Context context) {
+        this.context = context;
     }
+
     @Override
     public int getCount() {
         return Categorias.ITEMS.length;
@@ -46,6 +47,14 @@ public class AdapterCategoria extends BaseAdapter {
         final Categorias item = (Categorias) getItem(position);
         imagenCategory.setImageResource(item.getImagenCategoria());
         nombreCategory.setText(item.getCategoria());
+
+        String font1 = "fuentes/Chewy.ttf";
+        String font2 = "fuentes/Glacial.otf";
+
+        Typeface chewy = Typeface.createFromAsset(context.getAssets(), font1);
+        Typeface glacial = Typeface.createFromAsset(context.getAssets(), font2);
+
+        nombreCategory.setTypeface(chewy);
 
         return convertView;
     }
