@@ -66,7 +66,7 @@ public class RegistroActivity extends AppCompatActivity {
                 Intent registrar = new Intent(RegistroActivity.this, MainActivity.class);
                 startActivity(registrar);
                 Context context = getApplicationContext();
-                Toast.makeText(context,"Contraseña cambiada correctamente",Toast.LENGTH_LONG);
+                Toast.makeText(context,"Contraseña cambiada correctamente",Toast.LENGTH_LONG).show();
             }
         });
     }
