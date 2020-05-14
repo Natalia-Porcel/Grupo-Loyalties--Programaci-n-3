@@ -41,7 +41,7 @@ public class ForgetPasswordActivity extends AppCompatActivity {
                 Intent intent = new Intent (ForgetPasswordActivity.this, ProfileActivity.class);
                 startActivity(intent);
                 Context context = getApplicationContext();
-                Toast.makeText(context,"Contraseña cambiada correctamente",Toast.LENGTH_LONG);
+                Toast.makeText(context,"Contraseña cambiada correctamente",Toast.LENGTH_LONG).show();
             }
         });
 
