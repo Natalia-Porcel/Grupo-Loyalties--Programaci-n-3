@@ -14,6 +14,7 @@ import java.util.ArrayList;
 
 public class ReciclerViewAdapter extends RecyclerView.Adapter<ReciclerViewAdapter.ViewHolder> implements View.OnClickListener {
     ArrayList<String> recetas;
+    ArrayList<InfoReceta> listaRecetas = new ArrayList<>();
     private View.OnClickListener listener;
 
     public ReciclerViewAdapter(ArrayList<String> recetas) {
