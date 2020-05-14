@@ -34,5 +34,7 @@ public class RecetaActivity extends AppCompatActivity {
         textPrep.setTypeface(chewy);
         ingredientes.setTypeface(glacial);
         preparacion.setTypeface(glacial);
+
+
     }
 }

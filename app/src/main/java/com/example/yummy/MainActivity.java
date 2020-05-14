@@ -24,8 +24,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     private GridView gridView;
     private Categorias adaptador;
 
-    ArrayList<InfoReceta> listaRecetas = new ArrayList<>();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

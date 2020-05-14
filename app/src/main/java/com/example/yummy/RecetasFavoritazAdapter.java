@@ -67,7 +67,7 @@ public class RecetasFavoritazAdapter extends RecyclerView.Adapter<RecetasFavorit
         }
 
         public void onBind(Receta receta) {
-            textView.setText(receta.getName());
+            textView.setText(receta.getNombreReceta());
         }
     }
 }
