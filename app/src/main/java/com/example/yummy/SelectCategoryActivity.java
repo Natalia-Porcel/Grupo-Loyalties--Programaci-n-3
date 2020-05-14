@@ -2,13 +2,15 @@ package com.example.yummy;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.TextView;
 
-public class SelectCategoryActivity extends AppCompatActivity {
+public class SelectCategoryActivity extends AppCompatActivity implements AdapterView.OnItemClickListener{
 
     TextView selectCategoria;
     Typeface chewy, glacial;
@@ -28,5 +30,15 @@ public class SelectCategoryActivity extends AppCompatActivity {
         selectCategoria.setTypeface(chewy);
 
         gridView.setAdapter(new AdapterCategoria(this));
+        gridView.setOnItemClickListener(this);
+
+
     }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        Intent intent =new Intent(SelectCategoryActivity.this, MainActivity.class);
+        startActivity(intent);
+    }
+
 }
