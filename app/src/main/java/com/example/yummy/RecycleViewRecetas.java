@@ -2,8 +2,6 @@ package com.example.yummy;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -14,46 +12,24 @@ import java.util.ArrayList;
 public class RecycleViewRecetas extends AppCompatActivity {
     ArrayList<String> listaRecetas = new ArrayList<>();
     RecyclerView recyclerViewRecetas;
-    ImageButton like;
-
-    public RecycleViewRecetas(RecycleViewRecetas recycleViewRecetas, ArrayList<String> listaRecetas) {
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycle_view_recetas);
         recyclerViewRecetas = (RecyclerView) findViewById(R.id.rvRecetas);
-        like=findViewById(R.id.ibLike);
 
         recyclerViewRecetas.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
 
-        Intent intent = getIntent();
+            Intent intent = getIntent();
 
-        if(intent.hasExtra("recetas")){
-            listaRecetas = intent.getStringArrayListExtra("recetas");
-        }
-
-        ReciclerViewAdapter adapter= new ReciclerViewAdapter(listaRecetas);
-        recyclerViewRecetas.setAdapter(adapter);
-
-        adapter.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(RecycleViewRecetas.this, RecetaActivity.class);
-                startActivity(intent);
+            if(intent.hasExtra("recetas")){
+                listaRecetas = intent.getStringArrayListExtra("recetas");
             }
-        });
 
-        RecycleViewRecetas adapter1 = new RecycleViewRecetas(this, listaRecetas);
+            ReciclerViewAdapter adapter= new ReciclerViewAdapter(listaRecetas);
+            recyclerViewRecetas.setAdapter(adapter);
 
-//        like.setOnClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-//              RecetasFavoritasSharedPreferences.addToFav (listaRecetas.get(position));
-//            }
-//        });
-        recyclerViewRecetas.setAdapter(adapter);
     }
 
 }

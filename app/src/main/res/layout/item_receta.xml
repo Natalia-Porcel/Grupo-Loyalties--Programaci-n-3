@@ -14,7 +14,7 @@
             android:orientation="horizontal">
             <TextView
                 android:id="@+id/nameOfRecipe"
-                android:layout_width="350dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/chewy"
                 android:gravity="center"
@@ -22,14 +22,6 @@
                 android:text="Receta"
                 android:textColor="@android:color/primary_text_light"
                 android:textSize="25sp"/>
-            <ImageButton
-                android:id="@+id/ibLike"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_gravity="end"
-                android:background="?attr/selectableItemBackground"
-                android:src="@drawable/ic_fav"
-                android:tint="@color/colorAccent" />
         </LinearLayout>
 
     </LinearLayout>

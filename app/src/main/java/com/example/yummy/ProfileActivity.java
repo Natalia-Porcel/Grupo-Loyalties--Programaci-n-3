@@ -61,10 +61,6 @@ public class ProfileActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 logOut();
-                Intent intent = new Intent();
-                intent.putExtra("nombre", user.getUsername());
-                setResult(RESULT_OK, intent);
-                finish();
             }
         });
 

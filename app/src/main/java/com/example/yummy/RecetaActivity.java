@@ -2,6 +2,7 @@ package com.example.yummy;
 
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -12,6 +13,7 @@ public class RecetaActivity extends AppCompatActivity {
     Typeface chewy,glacial;
     TextView titulo,textIng,ingredientes,textPrep,preparacion;
     ImageView fotoReceta;
+    ImageButton like;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
