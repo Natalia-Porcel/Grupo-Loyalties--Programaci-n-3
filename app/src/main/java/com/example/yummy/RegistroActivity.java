@@ -1,7 +1,6 @@
 package com.example.yummy;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -9,6 +8,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class RegistroActivity extends AppCompatActivity {
 
@@ -63,6 +65,8 @@ public class RegistroActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent registrar = new Intent(RegistroActivity.this, MainActivity.class);
                 startActivity(registrar);
+                Context context = getApplicationContext();
+                Toast.makeText(context,"Contraseña cambiada correctamente",Toast.LENGTH_LONG);
             }
         });
     }
