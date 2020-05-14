@@ -27,13 +27,13 @@ public class RecetasFavoritasSharedPreferences {
 
     public ArrayList<Receta> getReceta() {
         SharedPreferences sharedPreferences = context.getSharedPreferences("Favoritos", Context.MODE_PRIVATE);
-        String productosString = sharedPreferences.getString("recetas", "[]");
+        String recetasString = sharedPreferences.getString("recetas", "[]");
 
         // Simple
         Gson gson = new Gson();
         Type listType = new TypeToken<ArrayList<Receta>>() {
         }.getType();
-        ArrayList<Receta> recetas = gson.fromJson(productosString, listType);
+        ArrayList<Receta> recetas = gson.fromJson(recetasString, listType);
 
         return recetas;
     }
